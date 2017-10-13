@@ -1,0 +1,13 @@
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.Operations.dll
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.Operations.pdb
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.DataAccess.dll
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.DataModel.dll
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\EntityFramework.dll
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\Newtonsoft.Json.dll
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.DataAccess.pdb
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.DataModel.pdb
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\EntityFramework.xml
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\Newtonsoft.Json.xml
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.csprojResolveAssemblyReference.cache
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.dll
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.pdb

@@ -1,0 +1,7 @@
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\bin\Debug\FitnessTracker.DataModel.dll
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\bin\Debug\FitnessTracker.DataModel.pdb
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\bin\Debug\Newtonsoft.Json.dll
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\bin\Debug\Newtonsoft.Json.xml
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.csprojResolveAssemblyReference.cache
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.dll
+c:\users\harbaruk\documents\visual studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.pdb
