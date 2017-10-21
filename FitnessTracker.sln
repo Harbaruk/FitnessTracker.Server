@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTracker.WebAPI", "FitnessTracker.WebAPI\FitnessTracker.WebAPI.csproj", "{ABDBC964-E8A3-438A-9268-270E551F6C2B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTracker.DataAccess", "FitnessTracker.DataAccess\FitnessTracker.DataAccess.csproj", "{B0323C1C-7523-45DC-8A35-129C9D151757}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTracker.DataModel", "FitnessTracker.DataModel\FitnessTracker.DataModel.csproj", "{629976DF-0B93-4624-B6E3-2C5D253F11F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTracker.Operations", "FitnessTracker.Operations\FitnessTracker.Operations.csproj", "{8DB25A5A-9B40-4819-ABF0-802FD968AE39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTracker.SecurityContext", "FitnessTracker.SecurityContext\FitnessTracker.SecurityContext.csproj", "{8E23A65E-1912-46B3-9093-DED3059E6084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTracker.WebApi", "FitnessTracker.WebApi\FitnessTracker.WebApi.csproj", "{46D54B3D-9E3E-4BCD-948D-9D69AFF951A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessTracker.CompositionRoot", "FitnessTracker.CompositionRoot\FitnessTracker.CompositionRoot.csproj", "{9280A24F-DB22-46DA-B224-61B9F336E5F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ABDBC964-E8A3-438A-9268-270E551F6C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ABDBC964-E8A3-438A-9268-270E551F6C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ABDBC964-E8A3-438A-9268-270E551F6C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ABDBC964-E8A3-438A-9268-270E551F6C2B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B0323C1C-7523-45DC-8A35-129C9D151757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B0323C1C-7523-45DC-8A35-129C9D151757}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0323C1C-7523-45DC-8A35-129C9D151757}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +33,18 @@ Global
 		{8DB25A5A-9B40-4819-ABF0-802FD968AE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DB25A5A-9B40-4819-ABF0-802FD968AE39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DB25A5A-9B40-4819-ABF0-802FD968AE39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E23A65E-1912-46B3-9093-DED3059E6084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E23A65E-1912-46B3-9093-DED3059E6084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E23A65E-1912-46B3-9093-DED3059E6084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E23A65E-1912-46B3-9093-DED3059E6084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D54B3D-9E3E-4BCD-948D-9D69AFF951A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D54B3D-9E3E-4BCD-948D-9D69AFF951A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D54B3D-9E3E-4BCD-948D-9D69AFF951A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D54B3D-9E3E-4BCD-948D-9D69AFF951A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9280A24F-DB22-46DA-B224-61B9F336E5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9280A24F-DB22-46DA-B224-61B9F336E5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9280A24F-DB22-46DA-B224-61B9F336E5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9280A24F-DB22-46DA-B224-61B9F336E5F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

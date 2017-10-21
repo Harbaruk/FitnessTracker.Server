@@ -1,0 +1,8 @@
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\FitnessTracker.SecurityContext.dll
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\FitnessTracker.SecurityContext.pdb
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\CryptSharp.dll
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\CryptSharp.pdb
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\CryptSharp.xml
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.csprojResolveAssemblyReference.cache
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.dll
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.pdb

@@ -40,8 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\FitnessOperations.cs" />
-    <Compile Include="Abstraction\IFitnessOperations.cs" />
+    <Compile Include="Abstraction\IAuthenticationOperations.cs" />
+    <Compile Include="Abstraction\IExpirationTokenOperations.cs" />
+    <Compile Include="Abstraction\IMyPlanOperations.cs" />
+    <Compile Include="Abstraction\IUserProfileOperations.cs" />
+    <Compile Include="Implementation\AuthenticationOperations.cs" />
+    <Compile Include="Implementation\ExpirationTokenOperations.cs" />
+    <Compile Include="Implementation\MyPlanOperations.cs" />
+    <Compile Include="Implementation\UserProfileOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -53,6 +59,10 @@
     <ProjectReference Include="..\FitnessTracker.DataModel\FitnessTracker.DataModel.csproj">
       <Project>{629976DF-0B93-4624-B6E3-2C5D253F11F6}</Project>
       <Name>FitnessTracker.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FitnessTracker.SecurityContext\FitnessTracker.SecurityContext.csproj">
+      <Project>{8E23A65E-1912-46B3-9093-DED3059E6084}</Project>
+      <Name>FitnessTracker.SecurityContext</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
