@@ -1,6 +1,6 @@
 ﻿using FitnessTracker.DataAccess;
 using FitnessTracker.DataAccess.Entity;
-using FitnessTracker.DataModel.Excersices;
+using FitnessTracker.DataModel.Exercises;
 using FitnessTracker.DataModel.Plan;
 using FitnessTracker.Operations.Abstraction;
 using System;
@@ -18,14 +18,14 @@ namespace FitnessTracker.Operations.Implementation
             _unitOfWork = uow;
         }
 
-        public void AddExcersice(PostExcersiceModel model, int currUserId)
+        public void AddExercise(PostExerciseModel model, int currUserId)
         {
             var user = _unitOfWork.Repository<UserEntity>().GetById(currUserId);
             var plan = _unitOfWork.Repository<PlanEntity>().GetById(model.PlanId);
 
             if (user != null)
             {
-                _unitOfWork.Repository<ExcersiceEntity>().Insert(new ExcersiceEntity
+                _unitOfWork.Repository<ExerciseEntity>().Insert(new ExerciseEntity
                 {
                     Amount = model.Amount,
                     Distance = model.Distance,
@@ -47,7 +47,7 @@ namespace FitnessTracker.Operations.Implementation
             var entityToInsert = new PlanEntity
             {
                 Duration = model.Duration,
-                Excercises = new List<ExcersiceEntity>(),
+                Excercises = new List<ExerciseEntity>(),
                 Name = model.Name,
                 Owner = user
             };
@@ -56,28 +56,28 @@ namespace FitnessTracker.Operations.Implementation
             return entityToInsert.Id;
         }
 
-        public void DeleteExcersice(int planId, int excersiceId, int currUserId)
+        public void DeleteExercise(int planId, int ExerciseId, int currUserId)
         {
-            var excersice = _unitOfWork.Repository<ExcersiceEntity>()
+            var Exercise = _unitOfWork.Repository<ExerciseEntity>()
                 .Include(x => x.Plan, x => x.Plan.Owner)
                 .FirstOrDefault(x => x.Plan.Owner.UserId == currUserId
-                  && x.Id == excersiceId && x.Plan.Id == planId);
+                  && x.Id == ExerciseId && x.Plan.Id == planId);
 
-            if (excersice != null)
+            if (Exercise != null)
             {
-                _unitOfWork.Repository<ExcersiceEntity>().Delete(excersice);
+                _unitOfWork.Repository<ExerciseEntity>().Delete(Exercise);
                 _unitOfWork.SaveChanges();
             }
         }
 
 
-        public ICollection<MyExcersicesModel> GetExcersices(int planId, int currUserId)
+        public ICollection<MyExercisesModel> GetExercises(int planId, int currUserId)
         {
             var plan = _unitOfWork.Repository<PlanEntity>()
                 .Include(x => x.Owner, x => x.Excercises)
                 .FirstOrDefault(x => x.Owner.UserId == currUserId && x.Id == planId);
 
-            return plan.Excercises.Select(x => new MyExcersicesModel
+            return plan.Excercises.Select(x => new MyExercisesModel
             {
                 Amount = x.Amount,
                 CreatedAt = x.CreatedAt,
@@ -104,18 +104,18 @@ namespace FitnessTracker.Operations.Implementation
                 }).ToList();
         }
 
-        public void UpdateExcersice(UpdateExcersiceModel model, int currUserId)
+        public void UpdateExercise(UpdateExerciseModel model, int currUserId)
         {
-            var excersice = _unitOfWork.Repository<ExcersiceEntity>().GetById(model.Id);
+            var Exercise = _unitOfWork.Repository<ExerciseEntity>().GetById(model.Id);
 
-            if (excersice != null)
+            if (Exercise != null)
             {
-                excersice.Amount = model.Amount;
-                excersice.Distance = model.Distance;
-                excersice.KindOfSport = model.KindOfSport;
-                excersice.Time = model.Time;
-                excersice.Type = model.Type;
-                excersice.Weight = model.Weight;
+                Exercise.Amount = model.Amount;
+                Exercise.Distance = model.Distance;
+                Exercise.KindOfSport = model.KindOfSport;
+                Exercise.Time = model.Time;
+                Exercise.Type = model.Type;
+                Exercise.Weight = model.Weight;
                 _unitOfWork.SaveChanges();
             }
         }

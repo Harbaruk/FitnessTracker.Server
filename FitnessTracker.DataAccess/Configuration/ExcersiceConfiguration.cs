@@ -3,11 +3,11 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace FitnessTracker.DataAccess.Configuration
 {
-    public class ExcersiceConfiguration : EntityTypeConfiguration<ExcersiceEntity>
+    public class ExerciseConfiguration : EntityTypeConfiguration<ExerciseEntity>
     {
-        public ExcersiceConfiguration()
+        public ExerciseConfiguration()
         {
-            ToTable("Excersices");
+            ToTable("Exercises");
 
             HasKey(x => x.Id);
             Property(x => x.Amount);

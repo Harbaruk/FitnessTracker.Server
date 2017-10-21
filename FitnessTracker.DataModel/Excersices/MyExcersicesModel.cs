@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace FitnessTracker.DataModel.Excersices
+namespace FitnessTracker.DataModel.Exercises
 {
-    public class MyExcersicesModel
+    public class MyExercisesModel
     {
         public int Id { get; set; }
         public int KindOfSport { get; set; }

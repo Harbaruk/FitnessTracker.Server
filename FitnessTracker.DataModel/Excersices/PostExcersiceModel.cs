@@ -1,6 +1,6 @@
-﻿namespace FitnessTracker.DataModel.Excersices
+﻿namespace FitnessTracker.DataModel.Exercises
 {
-    public class PostExcersiceModel
+    public class PostExerciseModel
     {
         public int PlanId { get; set; }
         public int KindOfSport { get; set; }

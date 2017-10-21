@@ -1,6 +1,6 @@
-﻿namespace FitnessTracker.DataModel.Excersices
+﻿namespace FitnessTracker.DataModel.Exercises
 {
-    public class UpdateExcersiceModel
+    public class UpdateExerciseModel
     {
         public int PlanId { get; set; }
         public int Id { get; set; }

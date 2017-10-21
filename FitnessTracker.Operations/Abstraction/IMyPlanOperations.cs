@@ -1,4 +1,4 @@
-﻿using FitnessTracker.DataModel.Excersices;
+﻿using FitnessTracker.DataModel.Exercises;
 using FitnessTracker.DataModel.Plan;
 using System.Collections.Generic;
 
@@ -8,9 +8,9 @@ namespace FitnessTracker.Operations.Abstraction
     {
         ICollection<MyPlanModel> GetPlans(int currUserId);
         int CreatePlan(CreatePlanModel model, int currUserId);
-        ICollection<MyExcersicesModel> GetExcersices(int planId, int currUserId);
-        void AddExcersice(PostExcersiceModel model, int currUserId);
-        void UpdateExcersice(UpdateExcersiceModel model, int currUserId);
-        void DeleteExcersice(int planId, int excersiceId, int currUserId);
+        ICollection<MyExercisesModel> GetExercises(int planId, int currUserId);
+        void AddExercise(PostExerciseModel model, int currUserId);
+        void UpdateExercise(UpdateExerciseModel model, int currUserId);
+        void DeleteExercise(int planId, int ExerciseId, int currUserId);
     }
 }

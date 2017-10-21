@@ -2,7 +2,7 @@
 
 namespace FitnessTracker.DataAccess.Entity
 {
-    public class ExcersiceEntity
+    public class ExerciseEntity
     {
         public int Id { get; set; }
         public int KindOfSport { get; set; }
