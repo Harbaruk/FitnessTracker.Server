@@ -1,4 +1,5 @@
-﻿using FitnessTracker.DataModel.Exercises;
+﻿using FitnessTracker.DataModel;
+using FitnessTracker.DataModel.Exercises;
 using FitnessTracker.DataModel.Plan;
 using FitnessTracker.Operations.Abstraction;
 using FitnessTracker.WebApi.Filters;
@@ -55,7 +56,7 @@ namespace FitnessTracker.WebApi.Controllers
             }
         }
 
-        [Route("Exercise")]
+        [Route("exercise")]
         [AuthorizeIfTokenValid]
         [HttpPost]
         public IHttpActionResult AddExercise(PostExerciseModel model)
@@ -121,7 +122,49 @@ namespace FitnessTracker.WebApi.Controllers
         {
             try
             {
-                return Ok(_planOperations.GetExercises(plan, _currentUserProvider.CurrentUserId));
+                return Ok(_planOperations.GetBlocks(plan, _currentUserProvider.CurrentUserId));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
+        [Route("plan/block")]
+        [AuthorizeIfTokenValid]
+        [HttpPost]
+        public IHttpActionResult CreateBlock(BlockPostModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                _planOperations.CreateBlock(model, _currentUserProvider.CurrentUserId);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
+        [Route("plan/block")]
+        [AuthorizeIfTokenValid]
+        [HttpPut]
+        public IHttpActionResult UpdateBlock(UpdateBlockModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                _planOperations.UpdateBlock(model, _currentUserProvider.CurrentUserId);
+                return Ok();
             }
             catch (Exception e)
             {

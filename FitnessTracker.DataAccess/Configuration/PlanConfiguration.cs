@@ -14,7 +14,7 @@ namespace FitnessTracker.DataAccess.Configuration
             Property(x => x.Duration);
 
             HasRequired(x => x.Owner);
-            HasMany(x => x.Excercises);
+            HasMany(x => x.Blocks);
         }
     }
 }

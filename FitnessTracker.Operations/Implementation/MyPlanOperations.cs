@@ -1,5 +1,6 @@
 ﻿using FitnessTracker.DataAccess;
 using FitnessTracker.DataAccess.Entity;
+using FitnessTracker.DataModel;
 using FitnessTracker.DataModel.Exercises;
 using FitnessTracker.DataModel.Plan;
 using FitnessTracker.Operations.Abstraction;
@@ -21,7 +22,7 @@ namespace FitnessTracker.Operations.Implementation
         public void AddExercise(PostExerciseModel model, int currUserId)
         {
             var user = _unitOfWork.Repository<UserEntity>().GetById(currUserId);
-            var plan = _unitOfWork.Repository<PlanEntity>().GetById(model.PlanId);
+            var block = _unitOfWork.Repository<BlockExersiceEntity>().GetById(model.BlockId);
 
             if (user != null)
             {
@@ -34,7 +35,7 @@ namespace FitnessTracker.Operations.Implementation
                     Type = model.Type,
                     Weight = model.Weight,
                     CreatedAt = DateTimeOffset.Now,
-                    Plan = plan
+                    Block = block
                 });
                 _unitOfWork.SaveChanges();
             }
@@ -47,7 +48,7 @@ namespace FitnessTracker.Operations.Implementation
             var entityToInsert = new PlanEntity
             {
                 Duration = model.Duration,
-                Excercises = new List<ExerciseEntity>(),
+                Blocks = new List<BlockExersiceEntity>(),
                 Name = model.Name,
                 Owner = user
             };
@@ -56,38 +57,41 @@ namespace FitnessTracker.Operations.Implementation
             return entityToInsert.Id;
         }
 
-        public void DeleteExercise(int planId, int ExerciseId, int currUserId)
+        public void DeleteExercise(int blockId, int exerciseId, int currUserId)
         {
-            var Exercise = _unitOfWork.Repository<ExerciseEntity>()
-                .Include(x => x.Plan, x => x.Plan.Owner)
-                .FirstOrDefault(x => x.Plan.Owner.UserId == currUserId
-                  && x.Id == ExerciseId && x.Plan.Id == planId);
+            var exercise = _unitOfWork.Repository<ExerciseEntity>()
+                .Include(x => x.Block, x => x.Block.Plan.Owner)
+                .FirstOrDefault(x => x.Block.Plan.Owner.UserId == currUserId
+                  && x.Id == exerciseId && x.Block.Id == blockId);
 
-            if (Exercise != null)
+            if (exercise != null)
             {
-                _unitOfWork.Repository<ExerciseEntity>().Delete(Exercise);
+                _unitOfWork.Repository<ExerciseEntity>().Delete(exercise);
                 _unitOfWork.SaveChanges();
             }
         }
 
-
-        public ICollection<MyExercisesModel> GetExercises(int planId, int currUserId)
+        public ICollection<BlockExersiceModel> GetBlocks(int planId, int currUserId)
         {
-            var plan = _unitOfWork.Repository<PlanEntity>()
-                .Include(x => x.Owner, x => x.Excercises)
-                .FirstOrDefault(x => x.Owner.UserId == currUserId && x.Id == planId);
-
-            return plan.Excercises.Select(x => new MyExercisesModel
-            {
-                Amount = x.Amount,
-                CreatedAt = x.CreatedAt,
-                Distance = x.Distance,
-                KindOfSport = x.KindOfSport,
-                Time = x.Time,
-                Id = x.Id,
-                Type = x.Type,
-                Weight = x.Weight
-            }).ToList();
+            return _unitOfWork.Repository<BlockExersiceEntity>()
+                .Include(x => x.Plan, x => x.Plan.Owner)
+                .Where(x => x.Plan.Id == planId && x.Plan.Owner.UserId == currUserId).ToList()
+                .Select(x => new BlockExersiceModel
+                {
+                    Exersices = x.Exersices.Select(y => new MyExercisesModel
+                    {
+                        Amount = y.Amount,
+                        CreatedAt = y.CreatedAt,
+                        Distance = y.Distance,
+                        KindOfSport = y.KindOfSport,
+                        Time = y.Time,
+                        Id = y.Id,
+                        Type = y.Type,
+                        Weight = y.Weight
+                    }).ToList(),
+                    Id = x.Id,
+                    Name = x.Name
+                }).ToList();
         }
 
         public ICollection<MyPlanModel> GetPlans(int currUserId)
@@ -106,19 +110,55 @@ namespace FitnessTracker.Operations.Implementation
 
         public void UpdateExercise(UpdateExerciseModel model, int currUserId)
         {
-            var Exercise = _unitOfWork.Repository<ExerciseEntity>().GetById(model.Id);
+            var exercise = _unitOfWork.Repository<ExerciseEntity>().GetById(model.Id);
 
-            if (Exercise != null)
+            if (exercise != null)
             {
-                Exercise.Amount = model.Amount;
-                Exercise.Distance = model.Distance;
-                Exercise.KindOfSport = model.KindOfSport;
-                Exercise.Time = model.Time;
-                Exercise.Type = model.Type;
-                Exercise.Weight = model.Weight;
+                exercise.Amount = model.Amount;
+                exercise.Distance = model.Distance;
+                exercise.KindOfSport = model.KindOfSport;
+                exercise.Time = model.Time;
+                exercise.Type = model.Type;
+                exercise.Weight = model.Weight;
                 _unitOfWork.SaveChanges();
             }
         }
 
+        public void UpdateBlock(UpdateBlockModel model, int currUserId)
+        {
+            var block = _unitOfWork.Repository<BlockExersiceEntity>()
+                .Include(x => x.Plan.Owner)
+                .FirstOrDefault(x => x.Plan.Owner.UserId == currUserId && x.Id == model.Id);
+
+            if (block != null)
+            {
+                block.Name = model.Name;
+            }
+            _unitOfWork.SaveChanges();
+        }
+
+        public void CreateBlock(BlockPostModel model, int currUserId)
+        {
+            var plan = _unitOfWork.Repository<PlanEntity>()
+                .Include(x => x.Owner).
+                FirstOrDefault(x => x.Owner.UserId == currUserId && x.Id == model.PlanId);
+
+            _unitOfWork.Repository<BlockExersiceEntity>().Insert(new BlockExersiceEntity
+            {
+                Exersices = new List<ExerciseEntity>(),
+                Name = model.Name,
+                Plan = plan
+            });
+            _unitOfWork.SaveChanges();
+        }
+
+        public void DeleteBlock(int blockId, int currUserId)
+        {
+            var block = _unitOfWork.Repository<BlockExersiceEntity>().Include(x => x.Plan.Owner)
+                .FirstOrDefault(x => x.Plan.Owner.UserId == currUserId && x.Id == blockId);
+
+            _unitOfWork.Repository<BlockExersiceEntity>().Delete(block);
+            _unitOfWork.SaveChanges();
+        }
     }
 }

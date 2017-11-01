@@ -13,7 +13,7 @@ namespace FitnessTracker.DataAccess.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201710211032380_Initial"; }
+            get { return "201710311823577_Initial"; }
         }
         
         string IMigrationMetadata.Source

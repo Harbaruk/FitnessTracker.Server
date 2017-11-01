@@ -7,7 +7,7 @@
         public override void Up()
         {
             CreateTable(
-                "dbo.Excersices",
+                "dbo.Exercises",
                 c => new
                 {
                     Id = c.Int(nullable: false, identity: true),
@@ -18,10 +18,22 @@
                     Weight = c.Int(),
                     Amount = c.Int(),
                     CreatedAt = c.DateTimeOffset(nullable: false, precision: 7),
-                    Plan_Id = c.Int(),
+                    Block_Id = c.Int(nullable: false),
                 })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Plans", t => t.Plan_Id)
+                .ForeignKey("dbo.ExersiceBlocks", t => t.Block_Id, cascadeDelete: true)
+                .Index(t => t.Block_Id);
+
+            CreateTable(
+                "dbo.ExersiceBlocks",
+                c => new
+                {
+                    Id = c.Int(nullable: false, identity: true),
+                    Name = c.String(),
+                    Plan_Id = c.Int(nullable: false),
+                })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Plans", t => t.Plan_Id, cascadeDelete: true)
                 .Index(t => t.Plan_Id);
 
             CreateTable(

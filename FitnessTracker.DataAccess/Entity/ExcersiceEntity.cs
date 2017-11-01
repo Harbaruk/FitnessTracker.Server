@@ -12,6 +12,6 @@ namespace FitnessTracker.DataAccess.Entity
         public int? Weight { get; set; }
         public int? Amount { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
-        public PlanEntity Plan { get; set; }
+        public BlockExersiceEntity Block { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 {
     public class PostExerciseModel
     {
-        public int PlanId { get; set; }
+        public int BlockId { get; set; }
         public int KindOfSport { get; set; }
         public int Type { get; set; }
         public int? Time { get; set; }
