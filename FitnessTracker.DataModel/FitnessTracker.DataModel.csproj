@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auth\AuthenticationModel.cs" />
+    <Compile Include="BlockExersiceModel.cs" />
+    <Compile Include="BlockPostModel.cs" />
     <Compile Include="Enums\TypeOfDiet.cs" />
     <Compile Include="Enums\UserType.cs" />
     <Compile Include="Excersices\MyExcersicesModel.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="Plan\CreatePlanModel.cs" />
     <Compile Include="Plan\MyPlanModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateBlockModel.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="UserProfile\UserProfileModel.cs" />
   </ItemGroup>

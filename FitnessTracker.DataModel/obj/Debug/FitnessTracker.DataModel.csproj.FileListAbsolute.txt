@@ -4,3 +4,4 @@ C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTr
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\bin\Debug\Newtonsoft.Json.xml
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.dll
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.pdb
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.csprojResolveAssemblyReference.cache

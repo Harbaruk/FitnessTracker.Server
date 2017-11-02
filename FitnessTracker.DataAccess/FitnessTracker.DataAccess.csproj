@@ -53,18 +53,25 @@
     <Compile Include="Configuration\ExersiceBlockConfiguration.cs" />
     <Compile Include="Configuration\ExpirationTokenConfiguration.cs" />
     <Compile Include="Configuration\PlanConfiguration.cs" />
+    <Compile Include="Configuration\ProductConfiguration.cs" />
     <Compile Include="Configuration\UserConfiguration.cs" />
     <Compile Include="Configuration\UserProfileConfiguration.cs" />
     <Compile Include="Entity\BlockExersiceEntity.cs" />
     <Compile Include="Entity\ExcersiceEntity.cs" />
     <Compile Include="Entity\ExpirationTokenEntity.cs" />
+    <Compile Include="Entity\MenuEntity.cs" />
     <Compile Include="Entity\PlanEntity.cs" />
+    <Compile Include="Entity\ProductEntity.cs" />
     <Compile Include="Entity\UserEntity.cs" />
     <Compile Include="Entity\UserProfileEntity.cs" />
     <Compile Include="Context\FitnessContext.cs" />
     <Compile Include="Migrations\201710311823577_Initial.cs" />
     <Compile Include="Migrations\201710311823577_Initial.Designer.cs">
       <DependentUpon>201710311823577_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711011016455_Products.cs" />
+    <Compile Include="Migrations\201711011016455_Products.Designer.cs">
+      <DependentUpon>201711011016455_Products.cs</DependentUpon>
     </Compile>
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
@@ -80,6 +87,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710311823577_Initial.resx">
       <DependentUpon>201710311823577_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711011016455_Products.resx">
+      <DependentUpon>201711011016455_Products.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

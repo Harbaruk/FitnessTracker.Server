@@ -12,7 +12,6 @@ namespace FitnessTracker.DataAccess.Configuration
             HasKey(x => x.Id);
             Property(x => x.Amount);
             Property(x => x.Distance);
-            Property(x => x.KindOfSport);
             Property(x => x.Time);
             Property(x => x.Type);
             Property(x => x.Weight);

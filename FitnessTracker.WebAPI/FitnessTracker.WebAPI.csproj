@@ -154,6 +154,7 @@
   <ItemGroup>
     <Compile Include="Controllers\ApiControllerBase.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\BlockController.cs" />
     <Compile Include="Controllers\PlanController.cs" />
     <Compile Include="Controllers\UserProfileController.cs" />
     <Compile Include="Filters\AuthorizeIfTokenValid.cs" />

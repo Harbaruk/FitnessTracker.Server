@@ -1,5 +1,4 @@
-﻿using FitnessTracker.DataModel;
-using FitnessTracker.DataModel.Exercises;
+﻿using FitnessTracker.DataModel.Exercises;
 using FitnessTracker.DataModel.Plan;
 using FitnessTracker.Operations.Abstraction;
 using FitnessTracker.WebApi.Filters;
@@ -106,64 +105,6 @@ namespace FitnessTracker.WebApi.Controllers
             try
             {
                 _planOperations.DeleteExercise(plan, id, _currentUserProvider.CurrentUserId);
-                return Ok();
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-                throw;
-            }
-        }
-
-        [Route("plan/{plan:int}")]
-        [HttpGet]
-        [AuthorizeIfTokenValid]
-        public IHttpActionResult GetExercises(int plan)
-        {
-            try
-            {
-                return Ok(_planOperations.GetBlocks(plan, _currentUserProvider.CurrentUserId));
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-                throw;
-            }
-        }
-
-        [Route("plan/block")]
-        [AuthorizeIfTokenValid]
-        [HttpPost]
-        public IHttpActionResult CreateBlock(BlockPostModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            try
-            {
-                _planOperations.CreateBlock(model, _currentUserProvider.CurrentUserId);
-                return Ok();
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-                throw;
-            }
-        }
-
-        [Route("plan/block")]
-        [AuthorizeIfTokenValid]
-        [HttpPut]
-        public IHttpActionResult UpdateBlock(UpdateBlockModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            try
-            {
-                _planOperations.UpdateBlock(model, _currentUserProvider.CurrentUserId);
                 return Ok();
             }
             catch (Exception e)

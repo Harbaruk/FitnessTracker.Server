@@ -10,3 +10,4 @@ C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTr
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.Migrations.Initial.resources
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.csproj.GenerateResource.Cache
+C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.Migrations.Products.resources

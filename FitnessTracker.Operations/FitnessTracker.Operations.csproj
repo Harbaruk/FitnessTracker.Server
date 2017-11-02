@@ -41,10 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstraction\IAuthenticationOperations.cs" />
+    <Compile Include="Abstraction\IBlockOperations.cs" />
     <Compile Include="Abstraction\IExpirationTokenOperations.cs" />
     <Compile Include="Abstraction\IMyPlanOperations.cs" />
     <Compile Include="Abstraction\IUserProfileOperations.cs" />
     <Compile Include="Implementation\AuthenticationOperations.cs" />
+    <Compile Include="Implementation\BlockOperations.cs" />
     <Compile Include="Implementation\ExpirationTokenOperations.cs" />
     <Compile Include="Implementation\MyPlanOperations.cs" />
     <Compile Include="Implementation\UserProfileOperations.cs" />
