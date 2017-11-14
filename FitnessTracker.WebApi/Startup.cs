@@ -11,6 +11,7 @@ using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using Owin;
+using Swashbuckle.Application;
 using System;
 using System.Linq;
 using System.Net.Http.Formatting;
@@ -30,6 +31,10 @@ namespace FitnessTracker.WebApi
 
             ConfigureWebApi(config);
             ServiceContainer container = ConfigureDependencyResolver(config);
+
+            config
+               .EnableSwagger(c => c.SingleApiVersion("v1", "FitnessTracker"))
+               .EnableSwaggerUi();
 
             ConfigureOAuth(app, container);
             app.UseCors(CorsOptions.AllowAll);
