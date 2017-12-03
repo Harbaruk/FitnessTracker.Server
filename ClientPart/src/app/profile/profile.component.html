@@ -1,0 +1,17 @@
+
+<div class="container">
+    <div class="profile">
+        <div class="info">
+          Firstname :  <input type="text" [(ngModel)]="profile.firstname">
+        <br>
+        <br>
+          Lastname  :   <input type="text" [(ngModel)]="profile.lastname">
+          <br><br>
+          Width :  <input type="text" [(ngModel)]="profile.weight">
+          <br><br>
+          Height  :  <input type="text" [(ngModel)]="profile.height">
+          <br><br>
+        </div>
+        <button type="Submit" value="Submit" (click)="change_profile()">Submit</button>
+    </div>
+</div>

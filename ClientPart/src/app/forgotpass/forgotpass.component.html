@@ -1,0 +1,24 @@
+<!--<div class="imgcontainer">
+    <img src="assets/img/img_avatar.png" alt="Avatar" class="avatar">
+</div>-->
+<h1>Forgot password??</h1>
+<div class="container">
+  <label><b>Email</b></label>
+  <input type="email" placeholder="Enter email" id="email" [(ngModel)]="email" required>
+  <div class="check-block" style="background-color:#f1f1f1">
+    <label>Enter right answer for </label>
+    <span><b><i> {{question}}</i></b></span>
+    <button type="button" id="btn" (click)="reload()">Reload</button>
+    <input type="text" id="check-inpt" placeholder="Enter answer" [(ngModel)]="checkAns" (ngModelChange)="valuechange()">
+  </div>
+  <button type="button" [disabled]="isNotValid" id="login-btn" (click)="confirm()">Confirm</button>
+</div>
+<div class="container" style="background-color:#f1f1f1">
+  <div class="show-block" style="background-color:#0271bc" *ngIf="show">
+    <label>Your data</label><br />
+    <span>Email: <b><i> {{email}}</i></b></span><br />
+    <span>Password: <b><i> {{password}}</i></b></span>
+    <button type="button" id="btn" (click)="hide()">Hide</button>
+  </div>
+  <button type="button" class="cancelbtn" (click)="cancel()">Cancel</button>
+</div>

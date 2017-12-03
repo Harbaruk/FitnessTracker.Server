@@ -1,0 +1,14 @@
+body
+{
+    background-color: white !important;
+}
+
+.data
+{
+    margin-left: 10%;
+    font: 18;
+    font-family: sans-serif;
+    font-size: 18;
+    border-radius: 1;
+    border-color: gray;
+}

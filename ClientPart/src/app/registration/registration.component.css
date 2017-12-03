@@ -1,0 +1,259 @@
+main {
+    background-color: #333;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+h5 {
+    margin: 15px 0 25px 0;
+    font-size: 14px;
+}
+
+#container {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 400px;
+    height: auto;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px solid black;
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(#424242, #222);
+    /* For Opera 11.1 to 12.0 */
+    background: -o-linear-gradient(#424242, #222);
+    /* For Firefox 3.6 to 15 */
+    background: -moz-linear-gradient(#424242, #222);
+    /* Standard syntax (must be last) */
+    background: linear-gradient(#424242, #222);
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.sex {
+    text-align: center;
+    /*list-style-type: none;*/
+    padding: 0;
+}
+
+
+/*.sex li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 5px;
+    text-align: center;
+}*/
+
+.nnn {
+    font-size: 20px;
+    padding: 0 7px 0 7px;
+    font-family: arial;
+}
+
+
+/*---Sliding radio button---*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #616161;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px;
+    background-color: rgb(129, 132, 224);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/*---Sliding radio button---*/
+
+
+/*---Input---*/
+
+.main-inpt input {
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+}
+
+.main-inpt input:focus {
+    border-bottom: 2px solid #444450;
+}
+
+select {
+    width: 23%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+}
+
+select option {
+    color: black!important;
+}
+
+.hp {
+    margin: 20px 0 0 0;
+}
+
+.hp input {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+}
+
+.hp input:focus {
+    border-bottom: 2px solid #444450;
+}
+
+.pass {
+    margin: 10px;
+}
+
+.pass input {
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+}
+
+.pass input:focus {
+    border-bottom: 2px solid #444450;
+}
+
+
+/*---Input---*/
+
+.text-div,
+.text-div1 {
+    display: block;
+    margin: 10px auto;
+    text-align: justify;
+    width: 70%;
+}
+
+.text-div1 {
+    font-size: 14px;
+}
+
+.line-text {
+    display: inline-block;
+}
+
+.line-text span {
+    width: 30%;
+    margin: 0 35px 0 35px;
+    border-bottom: 1px solid #fff;
+}
+
+button {
+    width: 200px;
+    border: 0;
+    border-radius: 8px;
+    padding-bottom: 0;
+    margin: 20px 0;
+    height: 60px;
+    background: #008CBA;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 600ms ease-in-out;
+}
+
+#sign-btn {
+    width: 70%;
+    height: 50px;
+    color: white;
+    background-color: #82ca9c;
+    margin: 25px 0;
+    border-radius: 25px;
+}
+
+#sign-btn:hover {
+    background-color: #7da7d9;
+}

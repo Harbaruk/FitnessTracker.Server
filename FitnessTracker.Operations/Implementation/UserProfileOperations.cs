@@ -2,6 +2,7 @@
 using FitnessTracker.DataAccess.Entity;
 using FitnessTracker.DataModel;
 using FitnessTracker.Operations.Abstraction;
+using System.Linq;
 
 namespace FitnessTracker.Operations.Implementation
 {
@@ -16,14 +17,16 @@ namespace FitnessTracker.Operations.Implementation
 
         public UserProfileModel GetProfile(int currUserId)
         {
-            var user = _unitOfWork.Repository<UserProfileEntity>().GetById(currUserId);
+            var user = _unitOfWork.Repository<UserEntity>().Include(x=>x.Profile).FirstOrDefault(x=>x.Id ==currUserId);
 
             return new UserProfileModel
             {
-                Age = user.Age,
-                Height = user.Height,
-                Weight = user.Weight,
-                Sex = user.Sex
+                Age = user.Profile.Age,
+                Height = user.Profile.Height,
+                Weight = user.Profile.Weight,
+                Sex = user.Profile.Sex,
+                Firstname = user.Firstname,
+                Lastname = user.Lastname
             };
         }
 

@@ -1,0 +1,100 @@
+<main>
+    <div id="container">
+        <h5>Зареєструватися за допомогою Facebook або Google</h5>
+        <form action="" autocomplete="off">
+            <!--<ul class="male">
+                <li>
+                    <span class="nnn">Чоловік</span>
+                </li>
+                <li>
+                    <label class="switch">              
+                <input type="checkbox">
+                <span class="slider round"></span>                
+              </label>
+                </li>
+                <li>
+                    <span class="nnn">Жінка</span>
+                </li>
+            </ul>-->
+            <div class="sex">
+                <span class="nnn">Чоловік</span>
+                <label class="switch">              
+                <input type="checkbox" name = "sex_flag" id="sex_flag" [(ngModel)]="sex_flag">
+                <span class="slider round"></span>                
+              </label>
+                <span class="nnn">Жінка</span>
+            </div>
+            <div class="main-inpt">
+                <input type="email" autocomplete="new-email" placeholder="Адреса електронної пошти:" id="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required #emailInput="ngModel">
+                <div class="show-error" *ngIf="emailInput.errors && emailInput.errors.required && emailInput.dirty">
+                    <span>Email cant be empty</span>
+                </div>
+                <div class="show-error" *ngIf="emailInput.errors && emailInput.errors.pattern && emailInput.dirty">
+                    <span>Wrong format email</span>
+                </div>
+                <input type="text" placeholder="Ім'я" id="firstname" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}">
+                <input type="text" placeholder="Прізвище" id="lastname" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}">
+            </div>
+
+            <div class="text-div">
+                <h3>День Народження</h3>
+                <p>
+                    Для реєстрації Ви повинні бути старші 18 років. Інші користувачі не побачать вашу дату народження.
+                </p>
+            </div>
+            <div class="line-text">
+                <span>Day</span>
+                <span>Month</span>
+                <span>Year</span>
+            </div>
+
+            <div class="b-day">
+
+                <select name="day" id="day" [(ngModel)]="day">
+                  <option value="" disabled>Day</option>  
+                  <option *ngFor="let day of days" [ngValue]="day"> {{day}} </option>                
+              </select>
+
+                <select name="month" id="month" [(ngModel)]="month">
+                    <option value="" disabled>Month</option>
+                    <option *ngFor="let month of months" [ngValue]="month.id"> {{month.name}} </option>
+                    </select>
+
+                <select name="year" id="year" [(ngModel)]="year">
+                  <option value="" disabled>Year</option>
+                  <option *ngFor="let year of years" [ngValue]="year"> {{year}} </option>
+                </select>
+
+            </div>
+            <div class="hp">
+                <input type="text" placeholder="Ріст" name="height" id="height" [(ngModel)]="height" required>
+                <input type="text" placeholder="Вага" name="weight" id="weight" [(ngModel)]="weight" required>
+
+            </div>
+
+
+            <div class="pass">
+                <input type="password" placeholder="Створіть пароль" id="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required #passInput="ngModel" autocomplete="new-password">
+                <span toggle="password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                <div class="show-error" *ngIf="passInput.errors && passInput.errors.required && passInput.dirty">
+                    <span>Password cant be empty</span>
+                </div>
+                <div class="show-error" *ngIf="passInput.errors && passInput.errors.pattern && passInput.dirty">
+                    <span>Wrong format password</span>
+                </div>
+            </div>
+
+            <div class="text-div1">
+                <p>
+                    Натискаючи Зареєструватися або Продовжити я приймаю наступне: Умови надання послуг, Умови обробки платежів, Політика конфіденційності
+                </p>
+            </div>
+
+            <button type="button" id="sign-btn" (click)="signUp()">Зареєструватися</button>
+
+            <div class="text-div2">
+                <p>Ви вже маєте акаунт? <a href="/login">Зайти</a></p>
+            </div>
+        </form>
+    </div>
+</main>
