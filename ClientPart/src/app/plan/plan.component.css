@@ -1,0 +1,37 @@
+.content {
+    margin: 25px 0 0 35px;
+}
+
+.content h2 {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: arial;
+}
+
+.all-exercise {}
+
+#new-exercise {
+    margin: 25px 15px;
+    width: 25%;
+    height: 150px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    background: -webkit-linear-gradient(#444444, #2e2e2e);
+    background: -o-linear-gradient(#444444, #2e2e2e);
+    background: -moz-linear-gradient(#444444, #2e2e2e);
+    background: linear-gradient(#444444, #2e2e2e);
+}
+
+#add-new-exercise {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 25px 15px;
+    width: 25%;
+    height: 150px;
+    background-color: #2d2d2d;
+    text-align: center;
+}
+
+#add-new-exercise h2 {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: arial;
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Http, RequestOptions, RequestOptionsArgs, Headers} from '@angular/http'
 import {Profile} from '../model/profile.component.model'
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'profile',
@@ -11,9 +12,10 @@ export class ProfileComponent implements OnInit {
 
     public profile:Profile;
 
-  constructor(private httpService:Http) { }
+  constructor(private httpService:Http, private apiService:ApiService) { }
 
   ngOnInit() {
+
     const headers = new Headers({ 'Content-Type': 'application/json','Authorization':'Bearer '+localStorage.getItem('token') });
 
     let opts:RequestOptionsArgs = { headers: headers };

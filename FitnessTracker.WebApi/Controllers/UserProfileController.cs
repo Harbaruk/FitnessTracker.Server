@@ -18,7 +18,7 @@ namespace FitnessTracker.WebApi.Controllers
         }
 
         [Route("profile")]
-        [AuthorizeIfTokenValid]
+        //[AuthorizeIfTokenValid]
         [HttpGet]
         public IHttpActionResult GetProfile()
         {

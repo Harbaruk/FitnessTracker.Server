@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,15 +47,19 @@
     <Compile Include="Abstraction\IBlockOperations.cs" />
     <Compile Include="Abstraction\IExpirationTokenOperations.cs" />
     <Compile Include="Abstraction\IMyPlanOperations.cs" />
+    <Compile Include="Abstraction\INewsOperations.cs" />
     <Compile Include="Abstraction\IUserProfileOperations.cs" />
     <Compile Include="Implementation\AuthenticationOperations.cs" />
     <Compile Include="Implementation\BlockOperations.cs" />
     <Compile Include="Implementation\ExpirationTokenOperations.cs" />
     <Compile Include="Implementation\MyPlanOperations.cs" />
+    <Compile Include="Implementation\NewsOperations.cs" />
     <Compile Include="Implementation\UserProfileOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FitnessTracker.DataAccess\FitnessTracker.DataAccess.csproj">
       <Project>{B0323C1C-7523-45DC-8A35-129C9D151757}</Project>

@@ -53,6 +53,7 @@
     <Compile Include="Excersices\PostExcersiceModel.cs" />
     <Compile Include="Excersices\UpdateExcersiceModel.cs" />
     <Compile Include="ExpirationTokenModel.cs" />
+    <Compile Include="NewsModel.cs" />
     <Compile Include="Plan\CreatePlanModel.cs" />
     <Compile Include="Plan\MyPlanModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
