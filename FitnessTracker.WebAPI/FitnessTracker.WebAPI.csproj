@@ -167,7 +167,9 @@
     <Compile Include="OAuth\SimpleAuthorizationServerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\Abstraction\ICurrentUserProvider.cs" />
+    <Compile Include="Providers\Abstraction\IUrlProvider.cs" />
     <Compile Include="Providers\CurrentUserProvider.cs" />
+    <Compile Include="Providers\UrlProvider.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>

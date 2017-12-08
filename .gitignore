@@ -260,3 +260,4 @@ Master/Source/Rik.Web/FrontEnd/app/**/*.html
 Master/Source/Rik.Web/FrontEnd/app/**/*.js
 Master/Source/Rik.Web/FrontEnd/app/**/*.js.map
 Master/Source/Rik.Web/FrontEnd/styles/styles.css
+/FitnessTracker.WebApi/Uploads/Images

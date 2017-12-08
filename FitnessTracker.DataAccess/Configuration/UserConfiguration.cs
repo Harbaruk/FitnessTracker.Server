@@ -17,6 +17,8 @@ namespace FitnessTracker.DataAccess.Configuration
             Property(x => x.Salt);
             Property(x => x.Role);
 
+            Property(x => x.Image);
+
             HasRequired(x => x.Profile);
         }
     }

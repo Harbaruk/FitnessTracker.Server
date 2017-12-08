@@ -92,6 +92,7 @@ namespace FitnessTracker.WebApi
 
             // Api
             container.Register<ICurrentUserProvider, CurrentUserProvider>(new PerRequestLifeTime());
+            container.Register<IUrlProvider, UrlProvider>(new PerRequestLifeTime());
             container.Register(sf => HttpContext.Current.Request, new PerRequestLifeTime());
 
             container.RegisterApiControllers(typeof(ApiControllerBase).Assembly);

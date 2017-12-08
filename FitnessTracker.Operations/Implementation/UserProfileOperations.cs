@@ -2,6 +2,8 @@
 using FitnessTracker.DataAccess.Entity;
 using FitnessTracker.DataModel;
 using FitnessTracker.Operations.Abstraction;
+using System;
+using System.IO;
 using System.Linq;
 
 namespace FitnessTracker.Operations.Implementation
@@ -38,6 +40,26 @@ namespace FitnessTracker.Operations.Implementation
             user.Height = model.Height;
             user.Sex = model.Sex;
             user.Weight = model.Weight;
+            _unitOfWork.SaveChanges();
+        }
+
+        public void UpdateProfileImage(PostImageModel model, int currUserId)
+        {
+            var bytes = Convert.FromBase64String(model.Base64);
+            var filename = $"{Guid.NewGuid().ToString()}.png";
+
+            var exists = Directory.Exists(model.Path);
+            if (!exists)
+            {
+                Directory.CreateDirectory(model.Path);
+            }
+            using (var imageFile = new FileStream(model.Path+"/" + filename, FileMode.Create))
+            {
+                imageFile.Write(bytes, 0, bytes.Length);
+                imageFile.Flush();
+            }
+
+            _unitOfWork.Repository<UserEntity>().GetById(currUserId).Image = $"{model.ImageUrl}/{filename}";
             _unitOfWork.SaveChanges();
         }
     }

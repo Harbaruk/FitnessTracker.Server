@@ -6,5 +6,6 @@ namespace FitnessTracker.Operations.Abstraction
     {
         UserProfileModel GetProfile(int currUserId);
         void UpdateProfile(UserProfileModel model, int currUserId);
+        void UpdateProfileImage(PostImageModel model, int currUserId);
     }
 }

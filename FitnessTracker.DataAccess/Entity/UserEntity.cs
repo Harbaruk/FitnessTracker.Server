@@ -11,6 +11,8 @@
         public string Salt { get; set; }
         public string Password { get; set; }
 
+        public string Image { get; set; }
+
         public UserProfileEntity Profile { get; set; }
         public ExpirationTokenEntity Token { get; set; }
     }

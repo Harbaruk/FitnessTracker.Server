@@ -53,9 +53,11 @@
     <Compile Include="Excersices\PostExcersiceModel.cs" />
     <Compile Include="Excersices\UpdateExcersiceModel.cs" />
     <Compile Include="ExpirationTokenModel.cs" />
+    <Compile Include="ImageModel.cs" />
     <Compile Include="NewsModel.cs" />
     <Compile Include="Plan\CreatePlanModel.cs" />
     <Compile Include="Plan\MyPlanModel.cs" />
+    <Compile Include="PostImageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdateBlockModel.cs" />
     <Compile Include="UserModel.cs" />
