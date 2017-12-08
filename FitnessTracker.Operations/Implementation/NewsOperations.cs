@@ -16,7 +16,7 @@ namespace FitnessTracker.Operations.Implementation
     public class NewsOperations : INewsOperations
     {
         private readonly string apiKey = "5cf0ee4070bc4d38ab89ea05bec9935a";
-        private readonly string url = "https://newsapi.org/v2/everything?q=sport&sortBy=popularitylanguage=en&apiKey=";
+        private readonly string url = "https://newsapi.org/v2/everything?sources=nfl-news&sortBy=popularitylanguage=en&apiKey=";
 
         public ICollection<NewsModel> GetNews()
         {

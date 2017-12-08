@@ -28,7 +28,9 @@ namespace FitnessTracker.Operations.Implementation
                 Weight = user.Profile.Weight,
                 Sex = user.Profile.Sex,
                 Firstname = user.Firstname,
-                Lastname = user.Lastname
+                Lastname = user.Lastname,
+                Image = user.Image,
+                Email = user.Email
             };
         }
 
