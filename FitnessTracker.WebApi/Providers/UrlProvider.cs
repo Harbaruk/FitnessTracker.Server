@@ -19,7 +19,8 @@ namespace FitnessTracker.WebApi.Providers
         {
             get
             {
-                var appendPort = !(_request.Url.Port == 80 && _request.Url.Scheme == "http" || _request.Url.Port == 443 && _request.Url.Scheme == "https");
+                var appendPort = !(_request.Url.Port == 80 && _request.Url.Scheme == "http" 
+                                || _request.Url.Port == 443 && _request.Url.Scheme == "https");
                 return string.Format("{0}://{1}{2}{3}",
                                     _request.Url.Scheme,
                                     _request.Url.Host,

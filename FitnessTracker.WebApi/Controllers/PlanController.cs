@@ -4,6 +4,7 @@ using FitnessTracker.Operations.Abstraction;
 using FitnessTracker.WebApi.Filters;
 using FitnessTracker.WebApi.Providers.Abstraction;
 using System;
+using System.Collections.Generic;
 using System.Web.Http;
 
 namespace FitnessTracker.WebApi.Controllers
@@ -59,6 +60,27 @@ namespace FitnessTracker.WebApi.Controllers
         [AuthorizeIfTokenValid]
         [HttpPost]
         public IHttpActionResult AddExercise(PostExerciseModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                _planOperations.AddExercise(model, _currentUserProvider.CurrentUserId);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
+        [Route("exercise")]
+        [AuthorizeIfTokenValid]
+        [HttpPost]
+        public IHttpActionResult AddExercise(IList<PostExerciseModel> model)
         {
             if (!ModelState.IsValid)
             {

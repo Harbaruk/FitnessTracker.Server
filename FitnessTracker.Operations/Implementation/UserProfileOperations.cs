@@ -26,7 +26,6 @@ namespace FitnessTracker.Operations.Implementation
                 Age = user.Profile.Age,
                 Height = user.Profile.Height,
                 Weight = user.Profile.Weight,
-                Sex = user.Profile.Sex,
                 Firstname = user.Firstname,
                 Lastname = user.Lastname,
                 Image = user.Image,
@@ -40,7 +39,7 @@ namespace FitnessTracker.Operations.Implementation
 
             user.Age = model.Age;
             user.Height = model.Height;
-            user.Sex = model.Sex;
+            //user.Sex = model.Sex;
             user.Weight = model.Weight;
             _unitOfWork.SaveChanges();
         }

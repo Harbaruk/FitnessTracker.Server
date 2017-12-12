@@ -40,6 +40,31 @@ namespace FitnessTracker.Operations.Implementation
             }
         }
 
+        public void AddExercise(IList<PostExerciseModel> model, int currUserId)
+        {
+            var user = _unitOfWork.Repository<UserEntity>().GetById(currUserId);
+            var block = _unitOfWork.Repository<BlockExersiceEntity>().GetById(model[0].BlockId);
+
+            if (user != null)
+            {
+                foreach (var item in model)
+                {
+                    _unitOfWork.Repository<ExerciseEntity>().Insert(new ExerciseEntity
+                    {
+                        Amount = item.Amount,
+                        Distance = item.Distance,
+                        KindOfSport = item.KindOfSport,
+                        Time = item.Time,
+                        Type = item.Type,
+                        Weight = item.Weight,
+                        CreatedAt = DateTimeOffset.Now,
+                        Block = block
+                    });
+                }
+                _unitOfWork.SaveChanges();
+            }
+        }
+
         public int CreatePlan(CreatePlanModel model, int currUserId)
         {
             var user = _unitOfWork.Repository<UserProfileEntity>().GetById(currUserId);

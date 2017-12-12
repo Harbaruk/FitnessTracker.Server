@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Abstraction\IAuthenticationOperations.cs" />
     <Compile Include="Abstraction\IBlockOperations.cs" />
+    <Compile Include="Abstraction\IDietOperations.cs" />
     <Compile Include="Abstraction\IExpirationTokenOperations.cs" />
     <Compile Include="Abstraction\IMyPlanOperations.cs" />
     <Compile Include="Abstraction\INewsOperations.cs" />

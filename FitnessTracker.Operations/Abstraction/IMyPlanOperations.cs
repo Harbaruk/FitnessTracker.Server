@@ -9,6 +9,7 @@ namespace FitnessTracker.Operations.Abstraction
         ICollection<MyPlanModel> GetPlans(int currUserId);
         int CreatePlan(CreatePlanModel model, int currUserId);
         void AddExercise(PostExerciseModel model, int currUserId);
+        void AddExercise(IList<PostExerciseModel> model, int currUserId);
         void UpdateExercise(UpdateExerciseModel model, int currUserId);
         void DeleteExercise(int planId, int ExerciseId, int currUserId);
     }
