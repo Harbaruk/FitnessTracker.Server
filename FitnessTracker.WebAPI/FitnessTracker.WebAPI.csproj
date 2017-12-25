@@ -157,12 +157,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ApiControllerBase.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BlockController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PlanController.cs" />
     <Compile Include="Controllers\UserProfileController.cs" />
+    <Compile Include="Filters\AuthorizeIfAdmin.cs" />
     <Compile Include="Filters\AuthorizeIfTokenValid.cs" />
     <Compile Include="OAuth\SimpleAuthorizationServerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
