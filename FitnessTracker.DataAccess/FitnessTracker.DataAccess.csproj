@@ -77,6 +77,10 @@
     <Compile Include="Migrations\201712072100567_Image.Designer.cs">
       <DependentUpon>201712072100567_Image.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712252100597_Followers.cs" />
+    <Compile Include="Migrations\201712252100597_Followers.Designer.cs">
+      <DependentUpon>201712252100597_Followers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -97,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712072100567_Image.resx">
       <DependentUpon>201712072100567_Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712252100597_Followers.resx">
+      <DependentUpon>201712252100597_Followers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

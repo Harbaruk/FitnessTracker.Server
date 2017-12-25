@@ -1,4 +1,6 @@
-﻿namespace FitnessTracker.DataAccess.Entity
+﻿using System.Collections.Generic;
+
+namespace FitnessTracker.DataAccess.Entity
 {
     public class UserEntity
     {
@@ -15,5 +17,7 @@
 
         public UserProfileEntity Profile { get; set; }
         public ExpirationTokenEntity Token { get; set; }
+        public ICollection<PlanEntity> Followed { get; set; }
+        public ICollection<PlanEntity> Plans { get; set; }
     }
 }

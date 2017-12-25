@@ -1,4 +1,5 @@
 ﻿using FitnessTracker.DataModel;
+using FitnessTracker.DataModel.Auth;
 
 namespace FitnessTracker.Operations.Abstraction
 {
@@ -6,7 +7,7 @@ namespace FitnessTracker.Operations.Abstraction
     {
         UserModel RegisterUser(AuthenticationModel user);
         UserModel FindUser(string username, string password);
-        //UserModel ForgotPassword(ForgotPasswordModel item);
+        SaltModel GenerateSalt(string password);
         //void UpdateToken(ExpirationTokenModel model);
     }
 }

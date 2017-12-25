@@ -35,5 +35,21 @@ namespace FitnessTracker.WebApi.Controllers
                 throw;
             }
         }
+
+        [Route("salt")]
+        [AllowAnonymous]
+        [HttpPost]
+        public IHttpActionResult GenerateSalt([FromBody]string pass)
+        {
+            try
+            {
+                return Ok(_authOperations.GenerateSalt(pass));
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+                throw;
+            }
+        }
     }
 }

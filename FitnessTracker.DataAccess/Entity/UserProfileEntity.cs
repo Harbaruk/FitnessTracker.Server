@@ -9,7 +9,5 @@ namespace FitnessTracker.DataAccess.Entity
         public int Height { get; set; }
         public int Sex { get; set; }
         public int Age { get; set; }
-
-        public ICollection<PlanEntity> Plans { get; set; }
     }
 }

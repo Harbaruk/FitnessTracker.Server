@@ -14,10 +14,6 @@ namespace FitnessTracker.DataAccess.Configuration
             Property(x => x.Height);
             Property(x => x.Sex);
             Property(x => x.Weight);
-
-            HasMany(x => x.Plans)
-                .WithRequired(x => x.Owner);
-
         }
     }
 }

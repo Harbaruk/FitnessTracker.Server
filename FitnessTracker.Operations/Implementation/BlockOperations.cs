@@ -21,7 +21,7 @@ namespace FitnessTracker.Operations.Implementation
         {
             return _unitOfWork.Repository<BlockExersiceEntity>()
                 .Include(x => x.Plan, x => x.Plan.Owner)
-                .Where(x => x.Plan.Id == planId && x.Plan.Owner.UserId == currUserId).ToList()
+                .Where(x => x.Plan.Id == planId && x.Plan.Owner.Id == currUserId).ToList()
                 .Select(x => new BlockExersiceModel
                 {
                     Exersices = x.Exersices.Select(y => new MyExercisesModel
@@ -31,7 +31,6 @@ namespace FitnessTracker.Operations.Implementation
                         Distance = y.Distance,
                         Time = y.Time,
                         Id = y.Id,
-                        Type = y.Type,
                         Weight = y.Weight
                     }).ToList(),
                     Id = x.Id,
@@ -43,7 +42,7 @@ namespace FitnessTracker.Operations.Implementation
         {
             var block = _unitOfWork.Repository<BlockExersiceEntity>()
                 .Include(x => x.Plan.Owner)
-                .FirstOrDefault(x => x.Plan.Owner.UserId == currUserId && x.Id == model.Id);
+                .FirstOrDefault(x => x.Plan.Owner.Id == currUserId && x.Id == model.Id);
 
             if (block != null)
             {
@@ -56,7 +55,7 @@ namespace FitnessTracker.Operations.Implementation
         {
             var plan = _unitOfWork.Repository<PlanEntity>()
                 .Include(x => x.Owner).
-                FirstOrDefault(x => x.Owner.UserId == currUserId && x.Id == model.PlanId);
+                FirstOrDefault(x => x.Owner.Id == currUserId && x.Id == model.PlanId);
 
             _unitOfWork.Repository<BlockExersiceEntity>().Insert(new BlockExersiceEntity
             {
@@ -70,7 +69,7 @@ namespace FitnessTracker.Operations.Implementation
         public void DeleteBlock(int blockId, int currUserId)
         {
             var block = _unitOfWork.Repository<BlockExersiceEntity>().Include(x => x.Plan.Owner)
-                .FirstOrDefault(x => x.Plan.Owner.UserId == currUserId && x.Id == blockId);
+                .FirstOrDefault(x => x.Plan.Owner.Id == currUserId && x.Id == blockId);
 
             _unitOfWork.Repository<BlockExersiceEntity>().Delete(block);
             _unitOfWork.SaveChanges();

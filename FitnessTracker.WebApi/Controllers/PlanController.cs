@@ -19,6 +19,55 @@ namespace FitnessTracker.WebApi.Controllers
             _planOperations = planOper;
         }
 
+        [Route("recommends")]
+        [AuthorizeIfTokenValid]
+        [HttpGet]
+        public IHttpActionResult GetRecommendPlans(string query)
+        {
+            try
+            {
+                return Ok(_planOperations.GetRecommends(query));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
+        [Route("apply/{id:int}")]
+        [AuthorizeIfTokenValid]
+        [HttpGet]
+        public IHttpActionResult Apply(int id)
+        {
+            try
+            {
+                _planOperations.ApplyToRecommend(id, _currentUserProvider.CurrentUserId);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
+        [Route("my_recommended")]
+        [AuthorizeIfTokenValid]
+        [HttpGet]
+        public IHttpActionResult MyRecommends()
+        {
+            try
+            {
+                return Ok(_planOperations.GetMyRecommendedPlans(_currentUserProvider.CurrentUserId));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
         [Route("plans")]
         [AuthorizeIfTokenValid]
         [HttpGet]

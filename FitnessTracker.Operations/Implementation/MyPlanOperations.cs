@@ -6,6 +6,8 @@ using FitnessTracker.Operations.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FitnessTracker.DataModel;
+using FitnessTracker.DataModel.Enums;
 
 namespace FitnessTracker.Operations.Implementation
 {
@@ -29,9 +31,7 @@ namespace FitnessTracker.Operations.Implementation
                 {
                     Amount = model.Amount,
                     Distance = model.Distance,
-                    KindOfSport = model.KindOfSport,
                     Time = model.Time,
-                    Type = model.Type,
                     Weight = model.Weight,
                     CreatedAt = DateTimeOffset.Now,
                     Block = block
@@ -53,9 +53,7 @@ namespace FitnessTracker.Operations.Implementation
                     {
                         Amount = item.Amount,
                         Distance = item.Distance,
-                        KindOfSport = item.KindOfSport,
                         Time = item.Time,
-                        Type = item.Type,
                         Weight = item.Weight,
                         CreatedAt = DateTimeOffset.Now,
                         Block = block
@@ -67,15 +65,17 @@ namespace FitnessTracker.Operations.Implementation
 
         public int CreatePlan(CreatePlanModel model, int currUserId)
         {
-            var user = _unitOfWork.Repository<UserProfileEntity>().GetById(currUserId);
+            var user = _unitOfWork.Repository<UserEntity>().GetById(currUserId);
 
             var entityToInsert = new PlanEntity
             {
-                Duration = model.Duration,
                 Blocks = new List<BlockExersiceEntity>(),
                 Name = model.Name,
-                Owner = user
+                Owner = user,
+                Type = model.Type
             };
+
+            _unitOfWork.Repository<PlanEntity>().Insert(entityToInsert);
             _unitOfWork.SaveChanges();
 
             return entityToInsert.Id;
@@ -85,7 +85,7 @@ namespace FitnessTracker.Operations.Implementation
         {
             var exercise = _unitOfWork.Repository<ExerciseEntity>()
                 .Include(x => x.Block, x => x.Block.Plan.Owner)
-                .FirstOrDefault(x => x.Block.Plan.Owner.UserId == currUserId
+                .FirstOrDefault(x => x.Block.Plan.Owner.Id == currUserId
                   && x.Id == exerciseId && x.Block.Id == blockId);
 
             if (exercise != null)
@@ -97,15 +97,52 @@ namespace FitnessTracker.Operations.Implementation
 
         public ICollection<MyPlanModel> GetPlans(int currUserId)
         {
-            return _unitOfWork.Repository<UserProfileEntity>()
-                .Include(x => x.Plans)
-                .FirstOrDefault(x => x.UserId == currUserId)
-                .Plans
+            return _unitOfWork.Repository<PlanEntity>()
+                .Include(x => x.Owner)
+                .Where(x => x.Owner.Id == currUserId)
                 .Select(x => new MyPlanModel
                 {
-                    Duration = x.Duration,
                     Name = x.Name,
                     Id = x.Id
+                }).ToList();
+        }
+
+        public ICollection<RecommendedPlanModel> GetRecommends(string query)
+        {
+            return _unitOfWork.Repository<PlanEntity>()
+                 .Include(x => x.Owner)
+                 .Where(x => x.Owner.Role == (int)UserType.Coach && (query == null || x.Type.StartsWith(query)))
+                 .Select(x => new RecommendedPlanModel
+                 {
+                     Firstname = x.Owner.Firstname,
+                     Id = x.Id,
+                     Image = x.Owner.Image,
+                     Lastname = x.Owner.Lastname,
+                     OwnerId = x.Owner.Id,
+                     Name = x.Name,
+                     Type = x.Type,
+                     Followers = x.Followers.Count
+                 }).OrderByDescending(x => x.Followers).ToList();
+        }
+
+        public void ApplyToRecommend(int id, int userId)
+        {
+            var plan = _unitOfWork.Repository<PlanEntity>().GetById(id);
+            var user = _unitOfWork.Repository<UserEntity>().GetById(userId);
+
+            plan.Followers.Add(user);
+            _unitOfWork.SaveChanges();
+        }
+
+        public ICollection<MyPlanModel> GetMyRecommendedPlans(int userId)
+        {
+            return _unitOfWork.Repository<UserEntity>().Include(x => x.Followed).FirstOrDefault(x => x.Id == userId)
+                .Followed.Select(x => new MyPlanModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Description = x.Description,
+                    Type = x.Type
                 }).ToList();
         }
 
@@ -117,9 +154,7 @@ namespace FitnessTracker.Operations.Implementation
             {
                 exercise.Amount = model.Amount;
                 exercise.Distance = model.Distance;
-                exercise.KindOfSport = model.KindOfSport;
                 exercise.Time = model.Time;
-                exercise.Type = model.Type;
                 exercise.Weight = model.Weight;
                 _unitOfWork.SaveChanges();
             }

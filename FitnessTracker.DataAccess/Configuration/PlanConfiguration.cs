@@ -11,10 +11,10 @@ namespace FitnessTracker.DataAccess.Configuration
 
             HasKey(x => x.Id);
 
-            Property(x => x.Duration);
-
+            Property(x => x.Type);
             HasRequired(x => x.Owner);
             HasMany(x => x.Blocks);
+            HasMany(x => x.Followers);
         }
     }
 }

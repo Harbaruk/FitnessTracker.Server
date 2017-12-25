@@ -20,6 +20,8 @@ namespace FitnessTracker.DataAccess.Configuration
             Property(x => x.Image);
 
             HasRequired(x => x.Profile);
+            HasMany(x => x.Plans).WithRequired(x => x.Owner);
+            HasMany(x => x.Followed);
         }
     }
 }

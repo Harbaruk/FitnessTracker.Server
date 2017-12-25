@@ -6,8 +6,10 @@ namespace FitnessTracker.DataAccess.Entity
     {
         public int Id { get; set; }
         public ICollection<BlockExersiceEntity> Blocks { get; set; }
-        public UserProfileEntity Owner { get; set; }
-        public int Duration { get; set; }
+        public UserEntity Owner { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
+        public string Type { get; set; }
+        public ICollection<UserEntity> Followers { get; set; }
     }
 }

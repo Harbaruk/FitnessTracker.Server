@@ -13,7 +13,6 @@ namespace FitnessTracker.DataAccess.Configuration
             Property(x => x.Amount);
             Property(x => x.Distance);
             Property(x => x.Time);
-            Property(x => x.Type);
             Property(x => x.Weight);
 
             HasRequired(x => x.Block);

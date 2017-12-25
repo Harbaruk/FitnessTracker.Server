@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using FitnessTracker.Operations.Abstraction;
 using FitnessTracker.WebApi.Providers.Abstraction;
-using FitnessTracker.Operations.Abstraction;
+using System.Web.Http;
 
 namespace FitnessTracker.WebApi.Controllers
 {

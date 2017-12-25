@@ -19,7 +19,7 @@ namespace FitnessTracker.Operations.Implementation
 
         public UserProfileModel GetProfile(int currUserId)
         {
-            var user = _unitOfWork.Repository<UserEntity>().Include(x=>x.Profile).FirstOrDefault(x=>x.Id ==currUserId);
+            var user = _unitOfWork.Repository<UserEntity>().Include(x => x.Profile).FirstOrDefault(x => x.Id == currUserId);
 
             return new UserProfileModel
             {
@@ -39,7 +39,6 @@ namespace FitnessTracker.Operations.Implementation
 
             user.Age = model.Age;
             user.Height = model.Height;
-            //user.Sex = model.Sex;
             user.Weight = model.Weight;
             _unitOfWork.SaveChanges();
         }
@@ -54,7 +53,7 @@ namespace FitnessTracker.Operations.Implementation
             {
                 Directory.CreateDirectory(model.Path);
             }
-            using (var imageFile = new FileStream(model.Path+"/" + filename, FileMode.Create))
+            using (var imageFile = new FileStream(model.Path + "/" + filename, FileMode.Create))
             {
                 imageFile.Write(bytes, 0, bytes.Length);
                 imageFile.Flush();

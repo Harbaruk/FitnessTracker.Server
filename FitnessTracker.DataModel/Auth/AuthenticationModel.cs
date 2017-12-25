@@ -11,8 +11,8 @@ namespace FitnessTracker.DataModel
         public int Height { get; set; }
         public decimal Weight { get; set; }
         public int Age { get; set; }
+        public string Role { get; set; }
         public DateTimeOffset? Birthday { get; set; }
         public string Password { get; set; }
-
     }
 }

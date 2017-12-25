@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auth\AuthenticationModel.cs" />
+    <Compile Include="Auth\SaltModel.cs" />
     <Compile Include="BlockExersiceModel.cs" />
     <Compile Include="BlockPostModel.cs" />
     <Compile Include="Diet\DietModel.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Plan\MyPlanModel.cs" />
     <Compile Include="PostImageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecommendedPlanModel.cs" />
     <Compile Include="UpdateBlockModel.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="UserProfile\UserProfileModel.cs" />
