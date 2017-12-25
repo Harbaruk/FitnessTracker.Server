@@ -5,3 +5,11 @@ C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTr
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.dll
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.pdb
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.csprojResolveAssemblyReference.cache
+C:\Projects\FitnessTracker\FitnessTracker.DataModel\bin\Debug\FitnessTracker.DataModel.dll
+C:\Projects\FitnessTracker\FitnessTracker.DataModel\bin\Debug\FitnessTracker.DataModel.pdb
+C:\Projects\FitnessTracker\FitnessTracker.DataModel\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\FitnessTracker\FitnessTracker.DataModel\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.csprojResolveAssemblyReference.cache
+C:\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.csproj.CoreCompileInputs.cache
+C:\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.dll
+C:\Projects\FitnessTracker\FitnessTracker.DataModel\obj\Debug\FitnessTracker.DataModel.pdb

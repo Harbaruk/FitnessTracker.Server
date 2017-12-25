@@ -14,3 +14,23 @@ C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTr
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.csprojResolveAssemblyReference.cache
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.dll
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.pdb
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.Operations.dll
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.Operations.pdb
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.DataAccess.dll
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.DataModel.dll
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.SecurityContext.dll
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\EntityFramework.dll
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\CryptSharp.dll
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.DataAccess.pdb
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.DataAccess.dll.config
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.DataModel.pdb
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\FitnessTracker.SecurityContext.pdb
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\EntityFramework.xml
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\CryptSharp.pdb
+C:\Projects\FitnessTracker\FitnessTracker.Operations\bin\Debug\CryptSharp.xml
+C:\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.csprojResolveAssemblyReference.cache
+C:\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.csproj.CoreCompileInputs.cache
+C:\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.dll
+C:\Projects\FitnessTracker\FitnessTracker.Operations\obj\Debug\FitnessTracker.Operations.pdb

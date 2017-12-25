@@ -17,3 +17,26 @@ C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTr
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.CompositionRoot\obj\Debug\FitnessTracker.CompositionRoot.csprojResolveAssemblyReference.cache
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.CompositionRoot\obj\Debug\FitnessTracker.CompositionRoot.dll
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.CompositionRoot\obj\Debug\FitnessTracker.CompositionRoot.pdb
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.CompositionRoot.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.CompositionRoot.pdb
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.DataAccess.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.Operations.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.SecurityContext.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\LightInject.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\EntityFramework.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.DataModel.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\CryptSharp.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.DataAccess.pdb
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.DataAccess.dll.config
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.Operations.pdb
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.SecurityContext.pdb
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\EntityFramework.xml
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\FitnessTracker.DataModel.pdb
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\CryptSharp.pdb
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\bin\Debug\CryptSharp.xml
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\obj\Debug\FitnessTracker.CompositionRoot.csprojResolveAssemblyReference.cache
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\obj\Debug\FitnessTracker.CompositionRoot.csproj.CoreCompileInputs.cache
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\obj\Debug\FitnessTracker.CompositionRoot.dll
+C:\Projects\FitnessTracker\FitnessTracker.CompositionRoot\obj\Debug\FitnessTracker.CompositionRoot.pdb

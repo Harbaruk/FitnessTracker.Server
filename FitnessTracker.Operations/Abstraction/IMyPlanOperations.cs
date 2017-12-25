@@ -16,5 +16,6 @@ namespace FitnessTracker.Operations.Abstraction
         ICollection<RecommendedPlanModel> GetRecommends(string query);
         void ApplyToRecommend(int id, int userId);
         ICollection<MyPlanModel> GetMyRecommendedPlans(int userId);
+        void Unfollow(int id, int currUserId);
     }
 }

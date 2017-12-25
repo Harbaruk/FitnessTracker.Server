@@ -11,3 +11,18 @@ C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTr
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.Migrations.Initial.resources
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.csproj.GenerateResource.Cache
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.Migrations.Products.resources
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\bin\Debug\FitnessTracker.DataAccess.dll.config
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\bin\Debug\FitnessTracker.DataAccess.dll
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\bin\Debug\FitnessTracker.DataAccess.pdb
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\bin\Debug\EntityFramework.dll
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\bin\Debug\EntityFramework.xml
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.Migrations.Initial.resources
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.Migrations.Products.resources
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.Migrations.Image.resources
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.Migrations.Followers.resources
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.csproj.GenerateResource.Cache
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.csproj.CoreCompileInputs.cache
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.dll
+C:\Projects\FitnessTracker\FitnessTracker.DataAccess\obj\Debug\FitnessTracker.DataAccess.pdb

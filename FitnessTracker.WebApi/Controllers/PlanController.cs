@@ -52,6 +52,23 @@ namespace FitnessTracker.WebApi.Controllers
             }
         }
 
+        [Route("unfollow/{id:int}")]
+        [AuthorizeIfTokenValid]
+        [HttpGet]
+        public IHttpActionResult Unfollow(int id)
+        {
+            try
+            {
+                _planOperations.Unfollow(id, _currentUserProvider.CurrentUserId);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
         [Route("my_recommended")]
         [AuthorizeIfTokenValid]
         [HttpGet]

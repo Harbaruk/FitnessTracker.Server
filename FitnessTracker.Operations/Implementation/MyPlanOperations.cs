@@ -159,5 +159,13 @@ namespace FitnessTracker.Operations.Implementation
                 _unitOfWork.SaveChanges();
             }
         }
+
+        public void Unfollow(int id, int currUserId)
+        {
+            var user = _unitOfWork.Repository<UserEntity>().Include(x => x.Followed).FirstOrDefault(x => x.Id == currUserId);
+
+            user.Followed.Remove(user.Followed.FirstOrDefault(x => x.Id == id));
+            _unitOfWork.SaveChanges();
+        }
     }
 }

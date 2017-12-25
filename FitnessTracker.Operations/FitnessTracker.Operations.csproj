@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstraction\IAdminOperations.cs" />
     <Compile Include="Abstraction\IAuthenticationOperations.cs" />
     <Compile Include="Abstraction\IBlockOperations.cs" />
     <Compile Include="Abstraction\IDietOperations.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Abstraction\IMyPlanOperations.cs" />
     <Compile Include="Abstraction\INewsOperations.cs" />
     <Compile Include="Abstraction\IUserProfileOperations.cs" />
+    <Compile Include="Implementation\AdminOperations.cs" />
     <Compile Include="Implementation\AuthenticationOperations.cs" />
     <Compile Include="Implementation\BlockOperations.cs" />
     <Compile Include="Implementation\ExpirationTokenOperations.cs" />
