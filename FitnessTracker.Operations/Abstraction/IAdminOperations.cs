@@ -6,5 +6,6 @@ namespace FitnessTracker.Operations.Abstraction
     public interface IAdminOperations
     {
         ICollection<UserModel> GetUsers(int skip, int take);
+        void DeleteUser(int id);
     }
 }

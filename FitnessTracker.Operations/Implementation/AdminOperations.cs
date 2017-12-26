@@ -19,6 +19,14 @@ namespace FitnessTracker.Operations.Implementation
             _unitOfWork = unitOfWork;
         }
 
+        public void DeleteUser(int id)
+        {
+            _unitOfWork.Repository<UserProfileEntity>().DeleteById(id);
+            _unitOfWork.Repository<PlanEntity>().RemoveRange(_unitOfWork.Repository<PlanEntity>().Set.Where(x => x.Owner.Id == id));
+            _unitOfWork.Repository<UserEntity>().DeleteById(id);
+            _unitOfWork.SaveChanges();
+        }
+
         public ICollection<UserModel> GetUsers(int skip = 0, int take = 10)
         {
             return _unitOfWork.Repository<UserEntity>().Set.Select(x => new UserModel

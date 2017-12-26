@@ -29,5 +29,21 @@ namespace FitnessTracker.WebApi.Controllers
                 throw;
             }
         }
+
+        [HttpDelete]
+        [Route("admin/user/{id:int}")]
+        public IHttpActionResult DeleteUser(int id)
+        {
+            try
+            {
+                _adminOperations.DeleteUser(id);
+                return Ok();
+            }
+            catch (System.Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
     }
 }

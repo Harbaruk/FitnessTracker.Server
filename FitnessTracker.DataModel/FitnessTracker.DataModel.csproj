@@ -50,6 +50,7 @@
     <Compile Include="BlockPostModel.cs" />
     <Compile Include="Diet\DietModel.cs" />
     <Compile Include="Enums\DayOfWeek.cs" />
+    <Compile Include="Enums\KindOfSport.cs" />
     <Compile Include="Enums\TypeOfDiet.cs" />
     <Compile Include="Enums\UserType.cs" />
     <Compile Include="Excersices\MyExcersicesModel.cs" />
