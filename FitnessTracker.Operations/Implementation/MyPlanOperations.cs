@@ -73,6 +73,8 @@ namespace FitnessTracker.Operations.Implementation
                 Blocks = new List<BlockExersiceEntity>(),
                 Name = model.Name,
                 Owner = user,
+                Description = model.Description,
+                Followers = new List<UserEntity>(),
                 Type = model.Type
             };
 
@@ -104,7 +106,9 @@ namespace FitnessTracker.Operations.Implementation
                 .Select(x => new MyPlanModel
                 {
                     Name = x.Name,
-                    Id = x.Id
+                    Id = x.Id,
+                    Description = x.Description,
+                    Type = x.Type
                 }).ToList();
         }
 
