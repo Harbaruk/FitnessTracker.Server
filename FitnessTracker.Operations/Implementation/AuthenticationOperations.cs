@@ -43,6 +43,17 @@ namespace FitnessTracker.Operations.Implementation
             return new SaltModel { Password = Convert.ToBase64String(encode), Salt = Convert.ToBase64String(salt) };
         }
 
+        public UserAuthModel GetMe(int userId)
+        {
+            var user = _unitOfWork.Repository<UserEntity>().GetById(userId);
+            return new UserAuthModel
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Role = user.Role
+            };
+        }
+
         public UserModel RegisterUser(AuthenticationModel user)
         {
             if (_unitOfWork.Repository<UserEntity>().Set.FirstOrDefault(x => x.Email == user.Email) != null)
@@ -60,7 +71,7 @@ namespace FitnessTracker.Operations.Implementation
                 Lastname = user.Lastname,
                 Password = Convert.ToBase64String(encode),
                 Salt = Convert.ToBase64String(salt),
-                Role = (int)Enum.Parse(typeof(UserType),user.Role),
+                Role = (int)Enum.Parse(typeof(UserType), user.Role),
                 Profile = new UserProfileEntity
                 {
                     Age = user.Age,
@@ -80,7 +91,6 @@ namespace FitnessTracker.Operations.Implementation
                 Lastname = userEntity.Lastname,
                 UserType = userEntity.Role
             };
-
         }
     }
 }

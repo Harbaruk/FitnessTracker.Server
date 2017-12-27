@@ -1,5 +1,6 @@
 ﻿using FitnessTracker.DataModel;
 using FitnessTracker.Operations.Abstraction;
+using FitnessTracker.WebApi.Filters;
 using FitnessTracker.WebApi.Providers.Abstraction;
 using System;
 using System.Web.Http;
@@ -28,6 +29,22 @@ namespace FitnessTracker.WebApi.Controllers
             try
             {
                 return Ok(_authOperations.RegisterUser(model));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
+        [HttpGet]
+        [AuthorizeIfTokenValid]
+        [Route("get_me")]
+        public IHttpActionResult GetMyAuthInfo()
+        {
+            try
+            {
+                return Ok(_authOperations.GetMe(_currentUserProvider.CurrentUserId));
             }
             catch (Exception e)
             {

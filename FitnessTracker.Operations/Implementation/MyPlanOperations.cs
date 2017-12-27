@@ -53,6 +53,7 @@ namespace FitnessTracker.Operations.Implementation
                     {
                         Amount = item.Amount,
                         Distance = item.Distance,
+                        Name = item.Name,
                         Time = item.Time,
                         Weight = item.Weight,
                         CreatedAt = DateTimeOffset.Now,
@@ -122,7 +123,9 @@ namespace FitnessTracker.Operations.Implementation
                      Name = x.Name,
                      Type = x.Type,
                      Followers = x.Followers.Count
-                 }).OrderByDescending(x => x.Followers).ToList();
+                 })
+                 .OrderByDescending(x => x.Followers)
+                 .ToList();
         }
 
         public void ApplyToRecommend(int id, int userId)
