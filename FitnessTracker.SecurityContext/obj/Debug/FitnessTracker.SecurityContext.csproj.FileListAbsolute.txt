@@ -6,12 +6,3 @@ C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTr
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.dll
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.pdb
 C:\Users\harbaruk\Documents\Visual Studio 2015\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.csprojResolveAssemblyReference.cache
-C:\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\FitnessTracker.SecurityContext.dll
-C:\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\FitnessTracker.SecurityContext.pdb
-C:\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\CryptSharp.dll
-C:\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\CryptSharp.pdb
-C:\Projects\FitnessTracker\FitnessTracker.SecurityContext\bin\Debug\CryptSharp.xml
-C:\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.csprojResolveAssemblyReference.cache
-C:\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.csproj.CoreCompileInputs.cache
-C:\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.dll
-C:\Projects\FitnessTracker\FitnessTracker.SecurityContext\obj\Debug\FitnessTracker.SecurityContext.pdb

@@ -20,7 +20,7 @@ namespace FitnessTracker.Operations.Implementation
         public ICollection<BlockExersiceModel> GetBlocks(int planId, int currUserId)
         {
             return _unitOfWork.Repository<BlockExersiceEntity>()
-                .Include(x => x.Plan, x => x.Plan.Owner)
+                .Include(x => x.Plan, x => x.Plan.Owner, x => x.Exersices)
                 .Where(x => x.Plan.Id == planId && x.Plan.Owner.Id == currUserId).ToList()
                 .Select(x => new BlockExersiceModel
                 {

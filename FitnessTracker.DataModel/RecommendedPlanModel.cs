@@ -10,5 +10,6 @@
         public int OwnerId { get; set; }
         public int Followers { get; set; }
         public string Type { get; set; }
+        public string Description { get; set; }
     }
 }

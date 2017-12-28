@@ -126,7 +126,8 @@ namespace FitnessTracker.Operations.Implementation
                      OwnerId = x.Owner.Id,
                      Name = x.Name,
                      Type = x.Type,
-                     Followers = x.Followers.Count
+                     Followers = x.Followers.Count,
+                     Description = x.Description
                  })
                  .OrderByDescending(x => x.Followers)
                  .ToList();
