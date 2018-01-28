@@ -37,6 +37,15 @@ namespace FitnessTracker.WebApi.Controllers
             }
         }
 
+        [Route("admin")]
+        [AllowAnonymous]
+        [HttpGet]
+        public IHttpActionResult CreateAdmin()
+        {
+            _authOperations.CreateAdmin();
+            return Ok();
+        }
+
         [HttpGet]
         [AuthorizeIfTokenValid]
         [Route("get_me")]
@@ -65,6 +74,22 @@ namespace FitnessTracker.WebApi.Controllers
             catch (Exception)
             {
                 return BadRequest();
+                throw;
+            }
+        }
+
+        [Route("industries")]
+        [AllowAnonymous]
+        [HttpGet]
+        public IHttpActionResult GetIndustries()
+        {
+            try
+            {
+                return Ok(_authOperations.GetIndustries());
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
                 throw;
             }
         }

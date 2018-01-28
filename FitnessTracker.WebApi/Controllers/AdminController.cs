@@ -45,5 +45,68 @@ namespace FitnessTracker.WebApi.Controllers
                 throw;
             }
         }
+
+        [Route("admin/approve_list")]
+        [HttpGet]
+        public IHttpActionResult GetApproveList()
+        {
+            try
+            {
+                return Ok(_adminOperations.GetApproveList());
+            }
+            catch (System.Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
+        [HttpGet]
+        [Route("admin/approve/{id:int}")]
+        public IHttpActionResult Approve(int id)
+        {
+            try
+            {
+                _adminOperations.Approve(id);
+                return Ok();
+            }
+            catch (System.Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
+        [HttpGet]
+        [Route("admin/reject/{id:int}")]
+        public IHttpActionResult Reject(int id)
+        {
+            try
+            {
+                _adminOperations.Reject(id);
+                return Ok();
+            }
+            catch (System.Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
+
+        [HttpGet]
+        [Route("admin/delete/{id:int}/{indId:int}")]
+        public IHttpActionResult Reject(int id, int indId)
+        {
+            try
+            {
+                _adminOperations.DeleteIndustry(id, indId);
+                return Ok();
+            }
+            catch (System.Exception e)
+            {
+                return BadRequest(e.Message);
+                throw;
+            }
+        }
     }
 }

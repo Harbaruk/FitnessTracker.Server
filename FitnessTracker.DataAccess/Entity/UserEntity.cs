@@ -12,6 +12,7 @@ namespace FitnessTracker.DataAccess.Entity
         public int Role { get; set; }
         public string Salt { get; set; }
         public string Password { get; set; }
+        public bool IsApproved { get; set; }
 
         public string Image { get; set; }
 
@@ -19,5 +20,6 @@ namespace FitnessTracker.DataAccess.Entity
         public ExpirationTokenEntity Token { get; set; }
         public ICollection<PlanEntity> Followed { get; set; }
         public ICollection<PlanEntity> Plans { get; set; }
+        public ICollection<IndustryEntity> Industries { get; set; }
     }
 }

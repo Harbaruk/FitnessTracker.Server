@@ -59,6 +59,7 @@
     <Compile Include="Entity\BlockExersiceEntity.cs" />
     <Compile Include="Entity\ExcersiceEntity.cs" />
     <Compile Include="Entity\ExpirationTokenEntity.cs" />
+    <Compile Include="Entity\IndustryEntity.cs" />
     <Compile Include="Entity\MenuEntity.cs" />
     <Compile Include="Entity\PlanEntity.cs" />
     <Compile Include="Entity\ProductEntity.cs" />
@@ -80,6 +81,10 @@
     <Compile Include="Migrations\201712252100597_Followers.cs" />
     <Compile Include="Migrations\201712252100597_Followers.Designer.cs">
       <DependentUpon>201712252100597_Followers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712280822327_Industries.cs" />
+    <Compile Include="Migrations\201712280822327_Industries.Designer.cs">
+      <DependentUpon>201712280822327_Industries.cs</DependentUpon>
     </Compile>
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
@@ -104,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712252100597_Followers.resx">
       <DependentUpon>201712252100597_Followers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712280822327_Industries.resx">
+      <DependentUpon>201712280822327_Industries.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

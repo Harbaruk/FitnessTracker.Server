@@ -135,7 +135,7 @@ namespace FitnessTracker.Operations.Implementation
 
         public void ApplyToRecommend(int id, int userId)
         {
-            var plan = _unitOfWork.Repository<PlanEntity>().GetById(id);
+            var plan = _unitOfWork.Repository<PlanEntity>().Include(x => x.Followers).FirstOrDefault(x => x.Id == id);
             var user = _unitOfWork.Repository<UserEntity>().GetById(userId);
 
             plan.Followers.Add(user);

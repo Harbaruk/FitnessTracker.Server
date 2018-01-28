@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApproveModel.cs" />
     <Compile Include="Auth\AuthenticationModel.cs" />
+    <Compile Include="Auth\IndustryModel.cs" />
     <Compile Include="Auth\SaltModel.cs" />
     <Compile Include="Auth\UserAuthModel.cs" />
     <Compile Include="BlockExersiceModel.cs" />

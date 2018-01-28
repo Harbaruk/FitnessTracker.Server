@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FitnessTracker.DataModel
 {
@@ -14,5 +15,6 @@ namespace FitnessTracker.DataModel
         public string Role { get; set; }
         public DateTimeOffset? Birthday { get; set; }
         public string Password { get; set; }
+        public ICollection<int> Industries { get; set; }
     }
 }

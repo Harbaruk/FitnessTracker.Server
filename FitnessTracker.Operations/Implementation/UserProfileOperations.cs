@@ -19,7 +19,8 @@ namespace FitnessTracker.Operations.Implementation
 
         public UserProfileModel GetProfile(int currUserId)
         {
-            var user = _unitOfWork.Repository<UserEntity>().Include(x => x.Profile).FirstOrDefault(x => x.Id == currUserId);
+            var user = _unitOfWork.Repository<UserEntity>().Include(x => x.Profile)
+                .FirstOrDefault(x => x.Id == currUserId);
 
             return new UserProfileModel
             {
@@ -29,17 +30,22 @@ namespace FitnessTracker.Operations.Implementation
                 Firstname = user.Firstname,
                 Lastname = user.Lastname,
                 Image = user.Image,
-                Email = user.Email
+                Email = user.Email,
+                Role = user.Role,
+                Sex = user.Profile.Sex
             };
         }
 
         public void UpdateProfile(UserProfileModel model, int currUserId)
         {
-            var user = _unitOfWork.Repository<UserProfileEntity>().GetById(currUserId);
+            var user = _unitOfWork.Repository<UserEntity>().Include(x => x.Profile).FirstOrDefault(x => x.Id == currUserId);
 
-            user.Age = model.Age;
-            user.Height = model.Height;
-            user.Weight = model.Weight;
+            user.Profile.Age = model.Age;
+            user.Profile.Height = model.Height;
+            user.Profile.Weight = model.Weight;
+            user.Firstname = model.Firstname;
+            user.Lastname = model.Lastname;
+
             _unitOfWork.SaveChanges();
         }
 

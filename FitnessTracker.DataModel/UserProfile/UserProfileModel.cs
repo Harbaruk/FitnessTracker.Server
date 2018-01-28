@@ -9,5 +9,7 @@
         public string Lastname { get; set; }
         public string Image { get; set; }
         public string Email { get; set; }
+        public int Sex { get; set; }
+        public int Role { get; set; }
     }
 }

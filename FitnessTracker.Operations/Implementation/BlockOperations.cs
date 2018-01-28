@@ -21,7 +21,7 @@ namespace FitnessTracker.Operations.Implementation
         {
             return _unitOfWork.Repository<BlockExersiceEntity>()
                 .Include(x => x.Plan, x => x.Plan.Owner, x => x.Exersices)
-                .Where(x => x.Plan.Id == planId && x.Plan.Owner.Id == currUserId).ToList()
+                .Where(x => x.Plan.Id == planId/* && x.Plan.Owner.Id == currUserId*/).ToList()
                 .Select(x => new BlockExersiceModel
                 {
                     Exersices = x.Exersices.Select(y => new MyExercisesModel
