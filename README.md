@@ -24,6 +24,8 @@ There are only 40% of code coverage at this moment
 
 
 * **Hryhoriy Harbaruk** - *Initial work* - [Harbaruk](https://github.com/Harbaruk)
+* **George Lukash** - Frontend part - [George](https://github.com/GeorgeLukash)
+* **Valery Koshmanova** - Database issues [Valery](https://github.com/Valery227)
 
 See also the list of [contributors](https://github.com/Harbaruk/FitnessTracker.Server/contributors) who participated in this project.
 
