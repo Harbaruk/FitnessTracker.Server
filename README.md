@@ -22,6 +22,7 @@ There are only 40% of code coverage at this moment
 * [CryptCSharp](https://github.com/ChrisMcKee/cryptsharp) - The crypto-library for passwords hashing
 * [OWIN](http://owin.org/) - Standart interface for web-apps
 
+## Authors
 
 * **Hryhoriy Harbaruk** - *Initial work* - [Harbaruk](https://github.com/Harbaruk)
 * **George Lukash** - Frontend part - [George](https://github.com/GeorgeLukash)
