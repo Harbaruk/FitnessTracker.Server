@@ -6,6 +6,8 @@ Fitness tracker backend part
 
 Fitness tracker app was created for motivating and helping people do some sports, improve their health and body. With new system of activity plans customization, you can create perfect plan for your body! Also you can use instructors' plans if it fits you. 
 
+[More information here](https://drive.google.com/file/d/1txhbqLALtVpsIpzq-ThZfzl3r94iEmzn/view?usp=sharing)
+
 ### Prerequisites
 
 To start this app you need to download client part from [Client Part](https://github.com/GeorgeLukash/ClientPart) and start both of the projects
