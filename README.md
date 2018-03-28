@@ -4,7 +4,7 @@ Fitness tracker backend part
 
 ## Getting Started
 
-
+Fitness tracker app was created for motivating and helping people do some sports, improve their health and body. With new system of activity plans customization, you can create perfect plan for your body! Also you can use instructors' plans if it fits you. 
 
 ### Prerequisites
 
