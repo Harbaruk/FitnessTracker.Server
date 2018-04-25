@@ -6,6 +6,8 @@ Fitness tracker backend part
 
 Fitness tracker app was created for motivating and helping people do some sports, improve their health and body. With new system of activity plans customization, you can create perfect plan for your body! Also you can use instructors' plans if it fits you. 
 
+[InVision](https://invis.io/BQHJ07VUCFV)
+
 [More information here](https://drive.google.com/file/d/1txhbqLALtVpsIpzq-ThZfzl3r94iEmzn/view?usp=sharing)
 
 ### Prerequisites
